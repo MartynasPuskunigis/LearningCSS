@@ -7,7 +7,7 @@
 }
 .logo {
     flex:1;
-    padding: 20px;
+    padding: 10px;
 }
 .menu {
     flex: 3;
@@ -15,7 +15,7 @@
 .menu ul {
     display: flex;
     list-style: none;
-    margin-top: 40px;
+    margin-top: 30px;
     flex-flow: row wrap;
 }
 .menu ul li {
@@ -28,11 +28,20 @@
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    transition-duration: 0.4s;
+    padding: 4px 4px;
+    border-radius: 8px;
+}
+.menu ul li a:hover {
+    background-color: orange;
+}
+#currentPage {
+    background-color: orange;
 }
 .banner-text {
     display: flex;
     padding: 5% 0;
-    color: white;
+    color: #EEEEEE;
     margin: auto;
     text-align: center;
     width: 50%;
@@ -41,7 +50,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 .banner {
-    background: url("images/wide-library.jpeg");
+    background: url("images/444162.jpg");
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -64,16 +73,16 @@
     flex-direction: row;
     flex-flow: row wrap;
     justify-content: space-around;
+    padding-bottom: 3%;
 }
 .book {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 .book-image {
     width: 150px;
-    height: 200px;
+    height: 250px;
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -101,24 +110,21 @@
     margin-left: 10%;
     margin-right: 10%;
     justify-content: space-around;
-    flex-direction: row;
-    
+    flex-flow: row wrap;
 }
 .book-description-image {
     width: 200px;
     height: 300px;
     margin-top: 2%;
     margin-bottom: 2%;
-    margin-left: 5%;
-    margin-right: 5%;
 }
 .book-description-items {
     display: flex;
     flex-direction: column;
     margin-top: 2%;
     margin-bottom: 2%;
-    margin-left: 5%;
-    margin-right: 5%;
+    height: auto;
+    width: 50%;
 }
 .book-description-header {
     color: white;
@@ -151,7 +157,70 @@
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
 }
-
 .book-description-button button:hover {
     background-color: #203541;   
+}
+.latest-posts-background {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #EEEEEE;
+}
+.latest-posts {
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+.latest-posts-header {
+    border-bottom: 2px solid grey;
+    padding: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color: #203541;
+}
+.post {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 5%;
+}
+.post-info {
+    height: auto;
+    width: 70%;
+}
+.post-image {
+    width: 150px;
+    height: 250px;
+    margin-left: 5%;
+}
+.post-header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
+.post-header h4 {
+    color: #203541;
+}
+.post-header p {
+    color: orange;
+    font-style: italic;
+    font-weight: bold;
+}
+.post-text {
+    text-align: left;
+    line-height: 2;
+}
+.footer {
+    background-color: #203541;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+.footer-text {
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2%;
 }
