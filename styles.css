@@ -1,226 +1,273 @@
-*{margin: 0; padding: 0;}
-.header {
-    background-color: #203541;
+@import url('https://fonts.googleapis.com/css?family=Roboto:300i,400,500,700,700i');
+@import url(reset.css);
+
+
+/*------------------------ Content code ----------------------------------------- */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.wrapper {
+    max-width: 1024px;
     display: flex;
-    width: 100%;
-    height: auto;
 }
+
+
+.header {
+  background-color: #203541;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+}
+
+.header .wrapper 
+{
+    flex: 1 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .logo {
-    flex:1;
-    padding: 10px;
+  display: flex;
+  align-items: center;
 }
-.menu {
-    flex: 3;
+
+.logo .logo-text {
+    padding-left: 10px;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 .menu ul {
-    display: flex;
-    list-style: none;
-    margin-top: 30px;
-    flex-flow: row wrap;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
 }
 .menu ul li {
-    flex: 1;
-    text-align: center;
+    padding: 5px;
 }
 .menu ul li a {
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    transition-duration: 0.4s;
-    padding: 4px 4px;
-    border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  transition-duration: 0.4s;
+  border-radius: 8px;
+  text-transform: uppercase;
+  padding: 10px;
 }
 .menu ul li a:hover {
-    background-color: orange;
+  background-color: orange;
+  padding: 10px;
 }
 #currentPage {
-    background-color: orange;
+  background-color: orange;
+  padding: 10px;
 }
+
 .banner-text {
-    display: flex;
-    padding: 5% 0;
-    color: #EEEEEE;
-    margin: auto;
-    text-align: center;
-    width: 50%;
-    font-size: 2em;
-    font-style: italic; 
-    font-family: Arial, Helvetica, sans-serif;
+  padding: 5% 0;
+  color: #eeeeee;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  font-size: 20px;
+  font-style: italic;
 }
 .banner {
-    background: url("images/444162.jpg");
-    width: 100%;
-    background-size: cover;
-    background-position: center;
+  background: url("images/444162.jpg");
+  width: 100%;
+  background-position: center;
+  display: flex;
+  justify-content: center;
 }
 .top-books {
-    background-color: #EEEEEE;
-    margin-left: 10%;
-    margin-right: 10%;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.top-books .wrapper {
+    justify-content: center;
+    background-color: #eeeeee;
+    padding-bottom: 3%;
+    width: 1024px;
 }
 .top-books-header {
-    border-bottom: 2px solid grey;
-    padding: 1%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    color: #203541;
+  border-bottom: 2px solid grey;
+  padding: 3%;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: bold;
+  color: #203541;
+  text-align: center;
 }
 .top-books-list {
-    display: flex;
-    flex-direction: row;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding-bottom: 3%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding-top: 2%;
 }
 .book {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 55px;
+  padding-right: 55px;
 }
 .book-image {
-    width: 150px;
-    height: 250px;
-    margin-top: 5%;
-    margin-bottom: 5%;
+  width: 150px;
+  height: 250px;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 .book-header {
-    margin-top: 5%;
-    margin-bottom: 5%;
+    padding-bottom: 5%;
+    padding-top: 5%; 
     font-weight: bold;
-}
-.top-books-items {
-    margin-left: 10%;
-    margin-right: 10%;
-}
-.book-header {
     color: #203541;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
 }
 .book-author {
-    color: #203541;
-    font-family: Arial, Helvetica, sans-serif;
+  color: #203541;
 }
 .book-description {
-    display: flex;
-    background-color: #203541;
-    margin-left: 10%;
-    margin-right: 10%;
-    justify-content: space-around;
-    flex-flow: row wrap;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+.book-description .wrapper {
+  justify-content: center;
+  background-color: #203541;
+  flex-flow: row wrap;
 }
 .book-description-image {
+    padding: 20px 30px;
+}
+.book-description-image-image {
     width: 200px;
     height: 300px;
-    margin-top: 2%;
-    margin-bottom: 2%;
 }
 .book-description-items {
     display: flex;
     flex-direction: column;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    height: auto;
-    width: 50%;
+    justify-content: space-between;
+    padding: 20px 30px;
+    width: 65%;
 }
 .book-description-header {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    margin-bottom: 20px;
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 24px;
 }
 .book-description-text {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 20%;
+  color: white;
 }
 .book-description-button {
-    display: flex;
+    justify-self: flex-end;
     align-self: flex-end;
 }
 .book-description-button button {
-    background-color: orange;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 8px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+  background-color: orange;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
 }
 .book-description-button button:hover {
-    background-color: #203541;   
+  background-color: #203541;
 }
-.latest-posts-background {
-    margin-left: 10%;
-    margin-right: 10%;
-    background-color: #EEEEEE;
+.latest-posts .wrapper {
+  flex-direction: column;
+  background-color: #eeeeee;
+  width: 1024px;
+  align-items: center;
+  
 }
 .latest-posts {
-    margin-left: 10%;
-    margin-right: 10%;
-    text-align: center;
+  display: flex;
+  justify-content: center;
 }
 .latest-posts-header {
-    border-bottom: 2px solid grey;
-    padding: 1%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    color: #203541;
+  border-bottom: 2px solid grey;
+  padding: 2% 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+  color: #203541;
+  width: 745px;
+}
+.latest-posts-items {
+    padding: 30px 50px;
 }
 .post {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-bottom: 5%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding-bottom: 3%;
+  padding-top: 3%;
 }
 .post-info {
-    height: auto;
-    width: 70%;
+  width: 70%;
 }
 .post-image {
-    width: 150px;
-    height: 250px;
-    margin-left: 5%;
+  width: 150px;
+  height: 250px;
+  padding-left: 5%;
 }
 .post-header {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    margin-bottom: 2%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding-bottom: 2%;
 }
 .post-header h4 {
+    font-weight: bold;
     color: #203541;
 }
 .post-header p {
-    color: orange;
-    font-style: italic;
-    font-weight: bold;
+  color: orange;
+  font-style: italic;
+  font-weight: bold;
 }
 .post-text {
-    text-align: left;
-    line-height: 2;
+  text-align: left;
+  line-height: 2;
 }
 .footer {
-    background-color: #203541;
-    text-align: center;
-    width: 100%;
-    height: auto;
+  background-color: #203541;
+  text-align: center;
+  width: 100%;
+  height: auto;
 }
 .footer-text {
-    color: white;
-    font-style: italic;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 2%;
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 2%;
+}
+@media screen and (max-width: 620px) {
+    .header .wrapper {
+        flex-direction: column;
+    }
+    .menu ul {
+        padding: 10px;
+        flex-direction: column;
+    }
+    .menu ul li {
+        padding: 15px;
+    }
+}
+ .post:not(:last-child) {
+    border-bottom: 2px solid grey;
 }
